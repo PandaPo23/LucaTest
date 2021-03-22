@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { mockPosts, PostItem } from './posts.mock';
 
 @Component({
   selector: 'app-posts',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./posts.component.scss']
 })
 export class PostsComponent implements OnInit {
-
-  constructor() { }
-
+  defaultText: string = 'Explorar';
+  menuItems: string[] = ['Explorar - A', 'Explorar - B', 'Explorar - C'];
+  posts: PostItem[] = [];
   ngOnInit(): void {
+    this.posts = mockPosts;
   }
-
 }

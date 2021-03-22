@@ -1,13 +1,5 @@
-.post {
-  display: flex;
-  width: 100%;
-
-  &-avatar {
+  .avatar {
     width: 100px;
-  }
-
-  &-content {
-    width: 500px;
   }
 
   .selected {
@@ -21,4 +13,3 @@
   .span {
     user-select: none;
   }
-}

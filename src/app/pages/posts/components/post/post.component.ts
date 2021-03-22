@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { PostItem } from '../../posts.mock';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PostComponent implements OnInit {
   like: boolean | undefined;
   favorite: boolean = false;
+  @Input() data: PostItem = {} as PostItem;
   onLikeClick(like: boolean): void {
     if (this.like === like) {
       this.like = undefined;
@@ -19,6 +21,8 @@ export class PostComponent implements OnInit {
     this.favorite = !this.favorite;
   } 
   ngOnInit(): void {
+    this.like = this.data.like;
+    this.favorite = this.data.favorite;
   }
 
 }

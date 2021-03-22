@@ -17,24 +17,27 @@ import {
   faThumbsUp as farThumbsUp, 
   faThumbsDown as farThumbsDown, 
   faStar as farStar,
-  faComment as farComment
+  faComment as farComment,
+  faBell as farBell
 } from '@fortawesome/free-regular-svg-icons';
+import { LcDropdownComponent } from './components/lc-dropdown/lc-dropdown.component';
 @NgModule({
   declarations: [
     PostsComponent,
-    PostComponent
+    PostComponent,
+    LcDropdownComponent
   ],
   imports: [
     CommonModule,
     PostsRoutingModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   exports: [PostsComponent]
 })
 export class PostsModule { 
   constructor(library: FaIconLibrary) {
     // Add multiple icons to the library
-    library.addIcons(fasUserCircle, fasShareAlt, fasThumbsUp, fasThumbsDown, fasStar, farThumbsUp, farThumbsDown, farStar, farComment);
+    library.addIcons(fasUserCircle, fasShareAlt, fasThumbsUp, fasThumbsDown, fasStar, farThumbsUp, farThumbsDown, farStar, farComment, farBell);
   }
 }
