@@ -1,3 +1,24 @@
 .post {
   display: flex;
+  width: 100%;
+
+  &-avatar {
+    width: 100px;
+  }
+
+  &-content {
+    width: 500px;
+  }
+
+  .selected {
+    color: yellow;
+  }
+  
+  fa-icon {
+    cursor: pointer;
+  }
+
+  .span {
+    user-select: none;
+  }
 }

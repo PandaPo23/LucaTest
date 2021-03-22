@@ -1,21 +1,31 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { PostsRoutingModule } from './posts-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PostsComponent } from './posts.component';
 import { PostComponent } from './components/post/post.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faUserCircle as fasUserCircle, faShareAlt as fasShareAlt } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faUserCircle as fasUserCircle, 
+  faShareAlt as fasShareAlt,
+  faThumbsUp as fasThumbsUp, 
+  faThumbsDown as fasThumbsDown, 
+  faStar as fasStar,
+} from '@fortawesome/free-solid-svg-icons';
 import { 
   faThumbsUp as farThumbsUp, 
   faThumbsDown as farThumbsDown, 
-  faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+  faStar as farStar,
+  faComment as farComment
+} from '@fortawesome/free-regular-svg-icons';
 @NgModule({
   declarations: [
     PostsComponent,
     PostComponent
   ],
   imports: [
+    CommonModule,
     PostsRoutingModule,
     NgbModule,
     FontAwesomeModule
@@ -25,6 +35,6 @@ import {
 export class PostsModule { 
   constructor(library: FaIconLibrary) {
     // Add multiple icons to the library
-    library.addIcons(fasUserCircle, fasShareAlt, farThumbsUp, farThumbsDown, farStar);
+    library.addIcons(fasUserCircle, fasShareAlt, fasThumbsUp, fasThumbsDown, fasStar, farThumbsUp, farThumbsDown, farStar, farComment);
   }
 }
